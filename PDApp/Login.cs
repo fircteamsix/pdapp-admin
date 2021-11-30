@@ -17,9 +17,12 @@ namespace PDApp
 {
     public partial class Login : Form
     {
+        public static Login instance;
+        public TextBox tb1;
         public Login()
         {
             InitializeComponent();
+            instance = this;
             this.ActiveControl = txtUsuario; // Seta o foco no txtUsuario.
         }
 
@@ -72,10 +75,10 @@ namespace PDApp
             //var content = await response.Content.ReadAsStringAsync();
 
             var responseApi = JsonConvert.DeserializeObject<UserResponse>(content);
-            if(responseApi.usuario != null)
+            if(responseApi.mensagem == "Usuario autorizado.")
             {
                 this.Hide();
-                Menu m = new Menu();
+                Menu m = new Menu(responseApi.mensagem);
                 m.ShowDialog();
                 this.Close();
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PDApp.ApiEntity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,15 @@ namespace PDApp
     public partial class Menu : Form
     {
         private Form frmAtivo;
-        public Menu()
+        public Menu instance;
+        public string nome;
+        public Menu(string nome)
         {
             InitializeComponent();
+            instance = this;
+            this.nome = nome;
+            //user.nome = user.nome;
+            Console.WriteLine(nome);
         }
 
         private void FormShow(Form frm)

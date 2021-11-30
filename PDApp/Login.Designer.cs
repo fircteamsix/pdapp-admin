@@ -36,6 +36,7 @@ namespace PDApp
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelErroLogin = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -46,7 +47,6 @@ namespace PDApp
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.labelErroLogin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -140,6 +140,18 @@ namespace PDApp
             this.panel2.Size = new System.Drawing.Size(423, 530);
             this.panel2.TabIndex = 1;
             // 
+            // labelErroLogin
+            // 
+            this.labelErroLogin.AutoSize = true;
+            this.labelErroLogin.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErroLogin.ForeColor = System.Drawing.Color.Red;
+            this.labelErroLogin.Location = new System.Drawing.Point(131, 200);
+            this.labelErroLogin.Name = "labelErroLogin";
+            this.labelErroLogin.Size = new System.Drawing.Size(161, 15);
+            this.labelErroLogin.TabIndex = 10;
+            this.labelErroLogin.Text = "E-Mail ou Senha incorretos.";
+            this.labelErroLogin.Visible = false;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
@@ -190,6 +202,7 @@ namespace PDApp
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(335, 20);
             this.txtSenha.TabIndex = 7;
+            this.txtSenha.Text = "123";
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // pictureBox3
@@ -220,6 +233,7 @@ namespace PDApp
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(335, 20);
             this.txtUsuario.TabIndex = 6;
+            this.txtUsuario.Text = "augustalmeid@gmail.com";
             // 
             // pictureBox2
             // 
@@ -254,18 +268,6 @@ namespace PDApp
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // labelErroLogin
-            // 
-            this.labelErroLogin.AutoSize = true;
-            this.labelErroLogin.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErroLogin.ForeColor = System.Drawing.Color.Red;
-            this.labelErroLogin.Location = new System.Drawing.Point(131, 200);
-            this.labelErroLogin.Name = "labelErroLogin";
-            this.labelErroLogin.Size = new System.Drawing.Size(161, 15);
-            this.labelErroLogin.TabIndex = 10;
-            this.labelErroLogin.Text = "E-Mail ou Senha incorretos.";
-            this.labelErroLogin.Visible = false;
             // 
             // Login
             // 
