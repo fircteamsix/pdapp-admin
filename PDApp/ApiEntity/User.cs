@@ -21,6 +21,12 @@ namespace PDApp.ApiEntity
         public string tipo_sanguineo { get; set; }
         public string data_nascimento { get; set; }
         public string foto { get; set; }
-       
+        public int status { get; set; }
+        public int admin { get; set; }
+
+        public override string ToString()
+        {
+            return nome + " | " + email + " | " + status + " | " + admin;
+        }
     }
 }

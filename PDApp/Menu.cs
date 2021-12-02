@@ -15,14 +15,14 @@ namespace PDApp
     {
         private Form frmAtivo;
         public Menu instance;
-        public string nome;
-        public Menu(string nome)
+        public User user;
+        public Menu(User user)
         {
             InitializeComponent();
             instance = this;
-            this.nome = nome;
+            this.user = user;
             //user.nome = user.nome;
-            Console.WriteLine(nome);
+            Console.WriteLine(user.nome);
         }
 
         private void FormShow(Form frm)

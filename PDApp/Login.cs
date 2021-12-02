@@ -75,19 +75,19 @@ namespace PDApp
             //var content = await response.Content.ReadAsStringAsync();
 
             var responseApi = JsonConvert.DeserializeObject<UserResponse>(content);
-            if(responseApi.mensagem == "Usuario autorizado.")
-            {
-                this.Hide();
-                Menu m = new Menu(responseApi.mensagem);
-                m.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                labelErroLogin.Visible = true;
-                labelErroLogin.Text = responseApi.mensagem;
-            }
-            Console.WriteLine(responseApi.mensagem);
+            //if(responseApi.mensagem == "Usuario autorizado.")
+            //{
+            //    this.Hide();
+            //    Menu m = new Menu(responseApi.usuario);
+            //    m.ShowDialog();
+            //    this.Close();
+            //}
+            //else
+            //{
+            //    labelErroLogin.Visible = true;
+            //    labelErroLogin.Text = responseApi.mensagem;
+            //}
+            Console.WriteLine(responseApi.usuario);
         }
 
     }
