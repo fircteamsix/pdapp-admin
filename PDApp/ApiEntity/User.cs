@@ -8,7 +8,7 @@ namespace PDApp.ApiEntity
 {
     public class User
     {
-        public int cd_usuario { get; set; }
+        public int id { get; set; }
         public string nome { get; set; }
         public string email { get; set; }
         public string senha { get; set; }
@@ -22,8 +22,21 @@ namespace PDApp.ApiEntity
         public string data_nascimento { get; set; }
         public string foto { get; set; }
         public int status { get; set; }
-        public int admin { get; set; }
+        public string admin { get; set; }
 
+        public User(int id)
+        {
+            this.id = id;
+        }
+        public User(int id, int status)
+        {
+            this.id = id;
+            this.status = status;
+        }
+
+        public User()
+        {
+        }
         public override string ToString()
         {
             return nome + " | " + email + " | " + status + " | " + admin;

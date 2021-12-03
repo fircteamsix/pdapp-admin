@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
+using System.Runtime.Serialization;
 
 namespace PDApp
 {
@@ -21,8 +23,8 @@ namespace PDApp
             InitializeComponent();
             instance = this;
             this.user = user;
-            //user.nome = user.nome;
-            Console.WriteLine(user.nome);
+            DateTime dataLogada = DateTime.Now;
+            toolStripStatusLabel1.Text = "Usuario logado: " + user.nome + " | Horario do ultimo login: " + dataLogada;
         }
 
         private void FormShow(Form frm)
@@ -50,8 +52,8 @@ namespace PDApp
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ActiveButton(btnUsuarios);
-            ActiveFormClose();
+            //ActiveButton(btnUsuarios);
+            //ActiveFormClose();
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
@@ -62,7 +64,20 @@ namespace PDApp
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            ActiveButton(btnUsuarios);
+            ActiveFormClose();
+        }
 
+        private void btnCampanhas_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnUsuarios);
+            FormShow(new FrmCampanhas());
+        }
+
+        private void btnHemocentros_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnUsuarios);
+            FormShow(new FrmHemocentros());
         }
     }
 }

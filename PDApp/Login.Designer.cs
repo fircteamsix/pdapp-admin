@@ -145,11 +145,11 @@ namespace PDApp
             this.labelErroLogin.AutoSize = true;
             this.labelErroLogin.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelErroLogin.ForeColor = System.Drawing.Color.Red;
-            this.labelErroLogin.Location = new System.Drawing.Point(131, 200);
+            this.labelErroLogin.Location = new System.Drawing.Point(111, 200);
             this.labelErroLogin.Name = "labelErroLogin";
-            this.labelErroLogin.Size = new System.Drawing.Size(161, 15);
+            this.labelErroLogin.Size = new System.Drawing.Size(16, 15);
             this.labelErroLogin.TabIndex = 10;
-            this.labelErroLogin.Text = "E-Mail ou Senha incorretos.";
+            this.labelErroLogin.Text = "...";
             this.labelErroLogin.Visible = false;
             // 
             // button2

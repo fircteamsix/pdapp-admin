@@ -60,10 +60,6 @@ namespace PDApp
 
         public async Task Logar(string email, string senha)
         {
-            var user = new User();
-            user.email = email;
-            user.senha = senha;
-
             HttpClient Cliente = new HttpClient { BaseAddress = new Uri("http://localhost:3000") };
             var response = await Cliente.GetAsync("/usuario/"+email + "/"+senha);
             var content = await response.Content.ReadAsStringAsync();
@@ -75,19 +71,19 @@ namespace PDApp
             //var content = await response.Content.ReadAsStringAsync();
 
             var responseApi = JsonConvert.DeserializeObject<UserResponse>(content);
-            //if(responseApi.mensagem == "Usuario autorizado.")
-            //{
-            //    this.Hide();
-            //    Menu m = new Menu(responseApi.usuario);
-            //    m.ShowDialog();
-            //    this.Close();
-            //}
-            //else
-            //{
-            //    labelErroLogin.Visible = true;
-            //    labelErroLogin.Text = responseApi.mensagem;
-            //}
-            Console.WriteLine(responseApi.usuario);
+            if (responseApi.usuario.admin == "true")
+            {
+                this.Hide();
+                Menu m = new Menu(responseApi.usuario);
+                m.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                labelErroLogin.Visible = true;
+                labelErroLogin.Text = "Usuario não autorizado ou invalido";
+            }
+            //Console.WriteLine(responseApi.usuario);
         }
 
     }

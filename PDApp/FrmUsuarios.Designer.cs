@@ -30,71 +30,106 @@ namespace PDApp
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tp_sanguineo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnNovoUsuario = new System.Windows.Forms.Button();
+            this.btnExcluirUsuario = new System.Windows.Forms.Button();
+            this.btnBanir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nome,
-            this.email,
-            this.tp_sanguineo,
-            this.nascimento,
-            this.status});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 151);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 69);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(784, 375);
+            this.dataGridView1.Size = new System.Drawing.Size(784, 457);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // nome
-            // 
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            // 
-            // email
-            // 
-            this.email.HeaderText = "E-Mail";
-            this.email.Name = "email";
-            // 
-            // tp_sanguineo
-            // 
-            this.tp_sanguineo.HeaderText = "Tipo Sanguineo";
-            this.tp_sanguineo.Name = "tp_sanguineo";
-            // 
-            // nascimento
-            // 
-            this.nascimento.HeaderText = "Data de Nascimento";
-            this.nascimento.Name = "nascimento";
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.Name = "status";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(121)))), ((int)(((byte)(93)))));
-            this.label1.Location = new System.Drawing.Point(305, 9);
+            this.label1.Location = new System.Drawing.Point(367, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 19);
+            this.label1.Size = new System.Drawing.Size(73, 19);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tela provisória de usuarios";
+            this.label1.Text = "Usuarios";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(500, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(191, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(697, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(359, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Buscar por nome ou e-mail:";
+            // 
+            // btnNovoUsuario
+            // 
+            this.btnNovoUsuario.Location = new System.Drawing.Point(12, 37);
+            this.btnNovoUsuario.Name = "btnNovoUsuario";
+            this.btnNovoUsuario.Size = new System.Drawing.Size(94, 23);
+            this.btnNovoUsuario.TabIndex = 5;
+            this.btnNovoUsuario.Text = "Novo usuário";
+            this.btnNovoUsuario.UseVisualStyleBackColor = true;
+            this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
+            // 
+            // btnExcluirUsuario
+            // 
+            this.btnExcluirUsuario.Enabled = false;
+            this.btnExcluirUsuario.Location = new System.Drawing.Point(112, 37);
+            this.btnExcluirUsuario.Name = "btnExcluirUsuario";
+            this.btnExcluirUsuario.Size = new System.Drawing.Size(165, 23);
+            this.btnExcluirUsuario.TabIndex = 6;
+            this.btnExcluirUsuario.Text = "Excluir usuário selecionado";
+            this.btnExcluirUsuario.UseVisualStyleBackColor = true;
+            this.btnExcluirUsuario.Click += new System.EventHandler(this.btnExcluirUsuario_Click);
+            // 
+            // btnBanir
+            // 
+            this.btnBanir.Enabled = false;
+            this.btnBanir.Location = new System.Drawing.Point(283, 38);
+            this.btnBanir.Name = "btnBanir";
+            this.btnBanir.Size = new System.Drawing.Size(75, 23);
+            this.btnBanir.TabIndex = 7;
+            this.btnBanir.Text = "Banir";
+            this.btnBanir.UseVisualStyleBackColor = true;
+            this.btnBanir.Click += new System.EventHandler(this.btnBanir_Click);
             // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(784, 526);
+            this.Controls.Add(this.btnBanir);
+            this.Controls.Add(this.btnExcluirUsuario);
+            this.Controls.Add(this.btnNovoUsuario);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -109,11 +144,12 @@ namespace PDApp
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tp_sanguineo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nascimento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnNovoUsuario;
+        private System.Windows.Forms.Button btnExcluirUsuario;
+        private System.Windows.Forms.Button btnBanir;
     }
 }
